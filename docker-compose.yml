@@ -1,0 +1,30 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=team_task_development
+      - DATABASE_HOST=db
+    tty: true
+    stdin_open: true
+
+  db:
+    image: mysql:8.0 
+    # MySQLのDockerイメージがApple Siliconに対応していないためMySQLのバージョンを8.0に指定
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=team_task_development
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
