@@ -38,3 +38,4 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring', '4.2.1'
 end
+gem "jsonapi-serializer", "~> 2.2"

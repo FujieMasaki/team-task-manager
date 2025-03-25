@@ -115,6 +115,8 @@ GEM
     json-schema (5.1.1)
       addressable (~> 2.8)
       bigdecimal (~> 3.1)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     jwt (2.10.1)
       base64
     listen (3.9.0)
@@ -261,6 +263,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   jbuilder (~> 2.7)
+  jsonapi-serializer (~> 2.2)
   listen (~> 3.3)
   mysql2 (~> 0.5)
   puma (~> 5.0)
