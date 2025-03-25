@@ -108,4 +108,4 @@ docker-compose exec web rails spec
 
 ## 開発者
 
-- [Masaki Fujie](https://github.com/FujieMasaki) - フルスタック開発者
+- [Masaki Fujie](https://github.com/FujieMasaki)
