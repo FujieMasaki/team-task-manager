@@ -1,4 +1,15 @@
+# テーブルを正しい順序でクリア
+puts 'Cleaning database...'
+Notification.delete_all
+Comment.delete_all
+Task.delete_all
+Project.delete_all
+TeamMember.delete_all
+Team.delete_all
+User.delete_all
+
 # 管理者ユーザー作成
+puts 'Creating users...'
 admin = User.create!(
   email: 'admin@example.com',
   password: 'password',
@@ -19,12 +30,14 @@ user2 = User.create!(
 )
 
 # チーム作成
+puts 'Creating teams...'
 team = Team.create!(
   name: '開発チーム',
   description: 'アプリケーション開発を担当するチーム'
 )
 
 # チームメンバー設定
+puts 'Setting up team members...'
 TeamMember.create!(
   team: team,
   user: admin,
@@ -44,6 +57,7 @@ TeamMember.create!(
 )
 
 # プロジェクト作成
+puts 'Creating projects...'
 project = Project.create!(
   name: 'ウェブアプリ開発',
   description: '新しいウェブアプリケーションの開発プロジェクト',
@@ -51,6 +65,7 @@ project = Project.create!(
 )
 
 # タスク作成
+puts 'Creating tasks...'
 task1 = Task.create!(
   title: 'デザイン作成',
   description: 'UIデザインの作成',
@@ -74,6 +89,7 @@ task2 = Task.create!(
 )
 
 # コメント作成
+puts 'Creating comments...'
 Comment.create!(
   content: 'デザインについて打ち合わせが必要です',
   task: task1,
@@ -81,6 +97,7 @@ Comment.create!(
 )
 
 # 通知作成
+puts 'Creating notifications...'
 Notification.create!(
   user: user1,
   content: '新しいタスクが割り当てられました',

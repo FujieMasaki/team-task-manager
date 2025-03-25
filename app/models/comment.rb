@@ -13,9 +13,9 @@ class Comment < ApplicationRecord
     assignee = task.assignee
     return unless assignee && assignee != user
 
-    Notification.create(
+    Notification.create!(
       user: assignee,
-      content: #{user.name} commented on task '#{task.title}'",
+      content: "#{user.name} commented on task '#{task.title}'",
       notifiable: self
     )
   end
