@@ -78,6 +78,9 @@ APIドキュメントはSwagger UIを通じて提供されます。以下のURL�
 ```
 http://localhost:3000/api-docs
 ```
+## ER図
+![Untitled_-_dbdiagram_io](https://github.com/user-attachments/assets/4b4603d4-0095-4a6c-accf-0bb8fc22f9a1)
+https://dbdiagram.io/d/67d9e45975d75cc84495e4b9
 
 ## テスト
 
