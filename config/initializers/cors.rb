@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins '*'  # 本番環境では適切なドメインに制限すべき
+      origins '*'  # 開発環境では全てのオリジンを許可。本番環境では適切に制限すべき
   
       resource '*',
         headers: :any,
