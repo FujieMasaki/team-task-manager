@@ -36,5 +36,5 @@ end
 
 group :development do
   gem 'listen', '~> 3.3'
-  gem 'spring'
+  gem 'spring', '4.2.1'
 end
