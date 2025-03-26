@@ -49,7 +49,7 @@
 
 1. リポジトリをクローン：
 ```bash
-git clone <リポジトリURL>
+git clone https://github.com/FujieMasaki/team-task-manager.git
 cd team-task-manager
 ```
 
